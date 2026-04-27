@@ -17,36 +17,102 @@
 <body>
     <div class="container">
         <header>
-            <div class="menu">
+            <!-- Menu desktop -->
+            <div class="overlay"></div>
+            <nav class="menu">
                 <ul>
                     <li><a href="#numeros">Números</a></li>
                     <li><a href="#guinness">Guinness</a></li>
                     <li><a href="#datas">Datas</a></li>
                     <li><a href="#ingressos">Ingressos</a></li>
                 </ul>
-            </div>
-            <div id="apresentacao">
+            </nav>
 
-            </div>
-        </header>
-        <main>
-            <div id="numeros">
+            <!-- Menu mobile -->
+            <div class="menu-container-mobile">
+                <button class="menu-toggle" aria-label="Abrir menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
 
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#numeros">Home</a></li>
+                        <li><a href="#guinness">Serviços</a></li>
+                        <li><a href="#datas">Sobre</a></li>
+                        <li><a href="#ingressos">Contato</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div id="guinness">
 
+            <div class="logo-mundial">
+                <img src="./assets/img/logo-dia-mundial-danca.png" alt="Logo do dia mundial da dança"
+                    title="Dia mundial da dança">
             </div>
-            <div id="datas">
-
+            <div class="content">
+                <div class="content-video">
+                    <div class="video-mobile">
+                        <iframe width="300" height="262.5"
+                            src="https://www.youtube.com/embed/wuP7T2I6q9Q?si=qCrR1CZiJWVUnyMx"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-desktop">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/wuP7T2I6q9Q?si=qCrR1CZiJWVUnyMx"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="content-text">
+                    <h1>
+                        Você acaba de ganhar
+                        um pedaço do <span>maior</span>
+                        festival de dança do <span>mundo</span>.
+                    </h1>
+                </div>
             </div>
-            <div id="ingressos">
-
-            </div>
-        </main>
-        <footer>
-            <!-- Colocar informações de contato -->
-        </footer>
     </div>
+    </header>
+    <main>
+        <div id="numeros">
+            
+        </div>
+        <div id="guinness">
+
+        </div>
+        <div id="datas">
+
+        </div>
+        <div id="ingressos">
+
+        </div>
+    </main>
+    <footer>
+        <!-- Colocar informações de contato -->
+    </footer>
+    </div>
+    <script>
+        // JavaScript para o menu mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const overlay = document.querySelector('.overlay');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            overlay.classList.add('active');
+
+        });
+
+        // Fechar o menu ao clicar no overlay
+        overlay.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>
