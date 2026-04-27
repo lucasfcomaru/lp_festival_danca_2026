@@ -18,7 +18,6 @@
     <div class="container">
         <header>
             <!-- Menu desktop -->
-            <div class="overlay"></div>
             <nav class="menu">
                 <ul>
                     <li><a href="#numeros">Números</a></li>
@@ -38,13 +37,14 @@
 
                 <nav class="nav-menu">
                     <ul>
-                        <li><a href="#numeros">Home</a></li>
-                        <li><a href="#guinness">Serviços</a></li>
-                        <li><a href="#datas">Sobre</a></li>
-                        <li><a href="#ingressos">Contato</a></li>
+                        <li><a href="#numeros">Números</a></li>
+                        <li><a href="#guinness">Guinness</a></li>
+                        <li><a href="#datas">Datas</a></li>
+                        <li><a href="#ingressos">Ingressos</a></li>
                     </ul>
                 </nav>
             </div>
+            <div class="overlay"></div>
 
             <div class="logo-mundial">
                 <img src="./assets/img/logo-dia-mundial-danca.png" alt="Logo do dia mundial da dança"
@@ -75,25 +75,35 @@
                     </h1>
                 </div>
             </div>
-    </div>
-    </header>
-    <main>
-        <div id="numeros">
-            
-        </div>
-        <div id="guinness">
+        </header>
+        <main>
+            <div id="numeros" class="numeros">
+                <div class="numeros-item">
+                    <h2>43</h2>
+                    <p>anos de história</p>
+                </div>
+                <div class="numeros-item">
+                    <h2>+5K</h2>
+                    <p>de coreografias inscritas na última edição</p>
+                </div>
+                <div class="numeros-item">
+                    <h2>+470K</h2>
+                    <p>espectadores presenciais na última edição</p>
+                </div>
+            </div>
+            <div id="guinness">
 
-        </div>
-        <div id="datas">
+            </div>
+            <div id="datas">
 
-        </div>
-        <div id="ingressos">
+            </div>
+            <div id="ingressos">
 
-        </div>
-    </main>
-    <footer>
-        <!-- Colocar informações de contato -->
-    </footer>
+            </div>
+        </main>
+        <footer>
+            <!-- Colocar informações de contato -->
+        </footer>
     </div>
     <script>
         // JavaScript para o menu mobile
@@ -103,7 +113,7 @@
 
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            overlay.classList.add('active');
+            overlay.classList.toggle('active');
 
         });
 
@@ -111,6 +121,16 @@
         overlay.addEventListener('click', () => {
             navMenu.classList.remove('active');
             overlay.classList.remove('active');
+        });
+
+        // Fechar o menu ao clicar em um link (âncora)
+        const menuLinks = document.querySelectorAll('.nav-menu a');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                overlay.classList.remove('active');
+            });
         });
     </script>
 </body>

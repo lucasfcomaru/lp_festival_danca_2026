@@ -1,6 +1,12 @@
 :root {
-    --font-white: #fff;
-    --font-yellow: #FDC422;
+    --white: #fff;
+    --black: #000;
+    --yellow-1: #FDC422;
+    --orange-1: #EB5C24;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -17,7 +23,7 @@ body {
 
 h1 {
     font-size: 2.8rem;
-    color: var(--font-white);
+    color: var(--white);
 }
 
 .container {
