@@ -1,10 +1,12 @@
 :root {
     --white: #fff;
     --black: #000;
+    --green: #359591;
     --yellow-1: #FDC422;
     --orange-1: #EB5C24;
 }
 
+/* Deslizar suavemente */
 html {
     scroll-behavior: smooth;
 }

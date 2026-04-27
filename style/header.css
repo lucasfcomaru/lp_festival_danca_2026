@@ -110,6 +110,7 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 500;
 }
+
 .overlay.active {
     display: block
 }
@@ -224,3 +225,4 @@ header {
             flex-direction: column;
         }
     }
+}
