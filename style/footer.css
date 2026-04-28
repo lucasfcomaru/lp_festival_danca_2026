@@ -1,0 +1,30 @@
+footer {
+  background: var(--orange-1);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 0 40px;
+
+  .logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 40px;
+
+    & img {
+      max-width: 100px;
+    }
+  }
+
+  .copy {
+    margin-top: 20px;
+    padding: 0 40px;
+
+    & span {
+      font-size: 0.875rem;
+      color: var(--white);
+      font-weight: 200;
+      font-style: italic;
+    }
+  }
+}
