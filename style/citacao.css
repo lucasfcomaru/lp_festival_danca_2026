@@ -73,11 +73,12 @@
   }
 }
 
-@media(max-width: 375px) {
+@media (max-width: 375px) {
   .citacao {
     & .citacao-texto {
       & p {
-      font-size: 1.2rem;
+        font-size: 1.2rem;
+      }
     }
   }
-} )
+}
