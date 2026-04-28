@@ -65,3 +65,43 @@
         }
     }
 }
+
+@media(max-width: 800px) {
+    .ingressos {
+        grid-template-columns: 1fr;
+        padding: 0 20px 60px;
+        gap: 40px;
+
+        & .ingressos-image {
+            margin: 0 auto;
+        }
+
+        & .ingressos-text {
+            align-items: center;
+            text-align: center;
+            margin-top: 0;
+            width: 90%;
+            margin: 0 auto;
+
+            & .btn-ingressos {
+                padding: 15px 60px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .ingressos {
+        & .ingressos-text {
+            & h3 {
+                font-size: 0.875rem;
+                letter-spacing: 0.3rem;
+            }
+
+            & span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
